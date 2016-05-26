@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.wherethismove.openglfireworks.MainActivity">
+
+    <include layout="@layout/content_main"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/consecutive_explosions_down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@android:drawable/arrow_down_float"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/consecutive_explosions_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@android:drawable/arrow_up_float"
+        android:layout_alignParentRight="true"
+        android:layout_above="@+id/consecutive_explosions_down"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/cubes_per_explosion_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@android:drawable/arrow_up_float"
+        android:layout_alignParentLeft="true"
+        android:layout_above="@+id/cubes_per_explosion_down"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/cubes_per_explosion_down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@android:drawable/arrow_down_float"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"/>
+
+    <TextView
+        android:id="@+id/explosionsCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/consecutive_explosions_down"
+        android:layout_alignTop="@+id/consecutive_explosions_down"
+        android:textColor="@android:color/white"/>
+
+    <TextView
+        android:id="@+id/cubesCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/cubes_per_explosion_down"
+        android:layout_alignTop="@+id/cubes_per_explosion_down"
+        android:textColor="@android:color/white"/>
+
+</RelativeLayout>
